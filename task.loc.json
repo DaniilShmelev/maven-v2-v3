@@ -16,7 +16,7 @@
   ],
   "author": "Microsoft Corporation",
   "version": {
-    "Major": 2,
+    "Major": 3,
     "Minor": 179,
     "Patch": 0
   },
@@ -87,7 +87,7 @@
       "name": "testResultsFiles",
       "type": "filePath",
       "label": "ms-resource:loc.input.label.testResultsFiles",
-      "defaultValue": "**/TEST-*.xml",
+      "defaultValue": "**/surefire-reports/TEST-*.xml",
       "required": true,
       "groupName": "junitTestResults",
       "helpMarkDown": "ms-resource:loc.input.help.testResultsFiles",
@@ -298,9 +298,21 @@
       "type": "boolean",
       "label": "ms-resource:loc.input.label.mavenFeedAuthenticate",
       "required": true,
-      "defaultValue": "true",
+      "defaultValue": "false",
       "groupName": "advanced",
       "helpMarkDown": "ms-resource:loc.input.help.mavenFeedAuthenticate"
+    },
+    {
+      "name": "skipEffectivePom",
+      "aliases": [
+        "effectivePomSkip"
+      ],
+      "type": "boolean",
+      "label": "ms-resource:loc.input.label.skipEffectivePom",
+      "required": true,
+      "defaultValue": "false",
+      "groupName": "advanced",
+      "helpMarkDown": "ms-resource:loc.input.help.skipEffectivePom"
     },
     {
       "name": "sqAnalysisEnabled",
@@ -417,6 +429,7 @@
     "EntryAlreadyExists": "ms-resource:loc.messages.EntryAlreadyExists",
     "EffectivePomInvalid": "ms-resource:loc.messages.EffectivePomInvalid",
     "AuthenticationNotNecessary": "ms-resource:loc.messages.AuthenticationNotNecessary",
-    "UsingAuthFeed": "ms-resource:loc.messages.UsingAuthFeed"
+    "UsingAuthFeed": "ms-resource:loc.messages.UsingAuthFeed",
+    "NoTestResults": "ms-resource:loc.messages.NoTestResults"
   }
 }

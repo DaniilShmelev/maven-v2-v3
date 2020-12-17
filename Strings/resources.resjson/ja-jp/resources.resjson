@@ -1,6 +1,6 @@
 {
   "loc.friendlyName": "Maven",
-  "loc.helpMarkDown": "[Learn more about this task](https://go.microsoft.com/fwlink/?LinkID=613723)",
+  "loc.helpMarkDown": "[Learn more about this task](https://go.microsoft.com/fwlink/?LinkID=613723) or [see the Maven documentation](http://maven.apache.org/guides/index.html)",
   "loc.description": "Apache Maven でビルド、テスト、配置します",
   "loc.instanceNameFormat": "Maven $(mavenPOMFile)",
   "loc.releaseNotes": "SonarQube 解析の構成は、[SonarQube](https://marketplace.visualstudio.com/items?itemName=SonarSource.sonarqube) または [SonarCloud](https://marketplace.visualstudio.com/items?itemName=SonarSource.sonarcloud) 拡張機能の 'Prepare Analysis Configuration' タスクに移動しました",
@@ -46,6 +46,8 @@
   "loc.input.help.mavenOpts": "JVM を起動するためにコマンド ライン引数を送信するときに使用される MAVEN_OPTS 環境変数を設定します。-Xmx フラグは JVM で使用可能な最大メモリを指定します。",
   "loc.input.label.mavenFeedAuthenticate": "ビルトイン Maven フィードの認証",
   "loc.input.help.mavenFeedAuthenticate": "Azure Artifacts からの Maven フィードを自動的に認証します。組み込みの Maven フィードを使用していない場合、このオプションを選択解除するとビルドを高速化できます。",
+  "loc.input.label.skipEffectivePom": "Skip generating effective POM while authenticating built-in feeds",
+  "loc.input.help.skipEffectivePom": "Authenticate built-in Maven feeds using the POM only, allowing parent POMs in Azure Artifacts/Azure DevOps Server [Package Management] feeds.",
   "loc.input.label.sqAnalysisEnabled": "SonarQube 分析または SonarCloud 分析の実行",
   "loc.input.help.sqAnalysisEnabled": "このオプションはバージョン 1 の **Maven** タスクから変更され、[SonarQube](https://marketplace.visualstudio.com/items?itemName=SonarSource.sonarqube) および [SonarCloud](https://marketplace.visualstudio.com/items?itemName=SonarSource.sonarcloud) Marketplace 拡張機能を使用するようになりました。このオプションを有効にして、[**Goals**] フィールドのゴールを実行した後に [SonarQube または SonarCloud 分析](http://redirect.sonarsource.com/doc/install-configure-scanner-tfs-ts.html) を実行するようにします。**install** または **package** のゴールを最初に実行する必要があります。また、この Maven タスクの前に、いずれか一方の拡張機能から **Prepare Analysis Configuration** タスクをビルド パイプラインに追加する必要があります。",
   "loc.input.label.sqMavenPluginVersionChoice": "SonarQube scanner for Maven のバージョン",
@@ -91,5 +93,6 @@
   "loc.messages.EntryAlreadyExists": "フィードまたはリポジトリの設定が XML ファイルに既に存在しています。",
   "loc.messages.EffectivePomInvalid": "有効な POM を解析できませんでした。",
   "loc.messages.AuthenticationNotNecessary": "認証が必要なビルトイン Maven フィードが見つかりませんでした。[ビルトイン Maven フィードの認証] を無効にすれば、ビルドを高速化できます。",
-  "loc.messages.UsingAuthFeed": "ビルトイン フィードを使用しています: "
+  "loc.messages.UsingAuthFeed": "ビルトイン フィードを使用しています: ",
+  "loc.messages.NoTestResults": "%s と一致するテスト結果ファイルが見つからないため、JUnit テスト結果の公開をスキップします。"
 }
